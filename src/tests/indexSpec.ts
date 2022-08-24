@@ -12,3 +12,12 @@ it("Convert Page Status 200 OK", () => {
     expect(res.status).toBe(200);
   });
 });
+
+it("Check Convert With Parameters", () => {
+  routes.get(
+    "/convert?name=5&width=500&height=100",
+    (req: express.Request, res: express.Response) => {
+      expect(res.status).toBe(200);
+    }
+  );
+});
